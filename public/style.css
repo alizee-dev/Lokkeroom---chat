@@ -251,3 +251,56 @@ button[type="submit"]:hover,
     margin-bottom: 16px;
     font-size: 14px;
 }
+
+/* ===== LISTE DES LOBBIES ===== */
+.lobby-list {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px;
+    margin-top: 24px;
+}
+
+.lobby-list h2 {
+    font-size: 20px;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+.lobby-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.2s;
+    color: #2d3436;
+}
+
+.lobby-card:hover {
+    border-color: #1a1a2e;
+    background-color: #f5f6fa;
+    transform: translateX(4px);
+}
+
+.lobby-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.lobby-arrow {
+    color: #b2bec3;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.lobby-card:hover .lobby-arrow {
+    color: #1a1a2e;
+}
+
+.no-lobbies {
+    color: #636e72;
+    font-style: italic;
+}

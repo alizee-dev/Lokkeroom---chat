@@ -50,8 +50,17 @@ app.use(passport.session())
 
 import indexRouter from "./routes/index.mjs"
 
-app.get("/", (req, res) => {
-    res.render("index")
+app.get("/", async (req, res) => {
+    try {
+        const lobbies = await pool.query('SELECT * FROM lobby')
+        res.render("index", { 
+            lobbies: lobbies,
+            user: req.user || null
+        })
+    } catch (err) {
+        console.error("Erreur lors de la récupération des lobbies :", err)
+        res.status(500).send("Erreur serveur")
+    }
 })
 app.use("/api", indexRouter)
 

@@ -1,10 +1,28 @@
 <div class="welcome">
-    <h1>Bienvenue sur Lokkeroom</h1>
-    <p>La plateforme de chat pour clubs sportifs.</p>
-    <p>
-        <a href="/api/register">Inscris-toi</a> ou 
-        <a href="/api/login">connecte-toi</a> pour rejoindre un lobby.
-    </p>
+    <h1>Bienvenue sur Lokkeroom 👋</h1>
+
+    <% if (user) { %>
+        <p>Connecté en tant que <strong><%= user.name %></strong></p>
+    <% } else { %>
+        <p>
+            <a href="/api/register">Inscris-toi</a> ou
+            <a href="/api/login">connecte-toi</a> pour rejoindre un lobby.
+        </p>
+    <% } %>
 </div>
-    
+
+<div class="lobby-list">
+    <h2>Les lobbies disponibles</h2>
+
+    <% if (lobbies.length === 0) { %>
+        <p class="no-lobbies">Aucun lobby disponible pour l'instant.</p>
+    <% } else { %>
+        <% lobbies.forEach(lobby => { %>
+            <a href="/api/lobby/<%= lobby.id %>" class="lobby-card">
+                <span class="lobby-title"><%= lobby.title %></span>
+                <span class="lobby-arrow">→</span>
+            </a>
+        <% }) %>
+    <% } %>
+</div>
 
