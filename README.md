@@ -6,16 +6,15 @@ A real-time chat platform for sports clubs. Coaches can create private lobbies f
 
 Built as part of a BeCode challenge (Express Advanced).
 
----
 
 ## Demo
 
 ![demo video](screenshots/demo.mp4)
 
 ![Home page](screenshots/home.png)
+
 ![Lobby chat](screenshots/lobby.png)
 
----
 
 ## Features
 
@@ -26,7 +25,6 @@ Built as part of a BeCode challenge (Express Advanced).
 - Real-time messaging — no page reload needed (Socket.io)
 - Passwords hashed with bcrypt, persistent sessions with Passport.js
 
----
 
 ## Tech Stack
 
@@ -34,7 +32,6 @@ Built as part of a BeCode challenge (Express Advanced).
 
 **Client:** EJS templating, HTML, CSS
 
----
 
 ## What I learned
 
@@ -44,8 +41,3 @@ Built as part of a BeCode challenge (Express Advanced).
 - Preventing SQL injection with parameterized queries
 - Real-time communication with WebSockets and Socket.io rooms
 
----
-
-## Author
-
-Alizée — BeCode bootcamp, 2023
