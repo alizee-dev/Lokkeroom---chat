@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= lobby.title %></title>
+</head>
+<body>
+
+    <h1><%= lobby.title %></h1>
+    <a href="/">← Retour à l'accueil</a>
+
+    <hr>
+
+    <h2>Messages</h2>
+
+    <% if (messages.length === 0) { %>
+        <p>Aucun message dans ce lobby pour l'instant.</p>
+    <% } else { %>
+        <% messages.forEach(message => { %>
+            <div>
+                <strong><%= message.name %></strong>
+                <span>— <%= message.timeStamp %></span>
+                <p><%= message.content %></p>
+            </div>
+            <hr>
+        <% }) %>
+    <% } %>
+
+    <h2>Envoyer un message</h2>
+    <form action="/api/lobby/<%= lobby.id %>" method="POST">
+        <textarea name="content" placeholder="Ton message..." required></textarea>
+        <br>
+        <button type="submit">Envoyer</button>
+    </form>
+
+</body>
+</html>

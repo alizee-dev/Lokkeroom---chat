@@ -1,0 +1,78 @@
+### Create a new lobby
+POST http://localhost:3000/api/lobby/newLobby
+Content-Type: application/json  
+
+{
+  "title" : "testLobby"
+}
+
+### Post a message if user is in the lobby
+POST http://localhost:3000/api/lobby/1
+Content-Type: application/json
+
+{
+  "user_id" : 6,
+  "content" : "Good morning!",
+  "timeStamp" : "2023-08-06 09:12:45"
+}
+
+### GEt messages from a lobby
+GET http://localhost:3000/api/lobby/1
+Content-Type: application/json
+
+### GET all users from a lobby
+GET http://localhost:3000/api/lobby/1/users
+Content-Type: application/json
+
+### GET a specific message from a specific lobby
+GET http://localhost:3000/api/lobby/1/6
+Content-Type: application/json
+
+### ADD a user in a specific lobby
+POST http://localhost:3000/api/lobby/3/add-user
+Content-Type: application/json  
+
+{
+  "name" : "Simon Crack",
+  "email" : "Sicrack@gmail.com",
+  "password" : "ihfeo-ifbo",
+  "role" : "user"
+}
+
+### REMOVE an user from a specific lobby
+POST http://localhost:3000/api/lobby/3/remove-user/11
+Content-Type: application/json  
+
+
+
+
+### REGISTER
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+  "name" : "TestiToday",
+  "email" :"testoooday@gmail.com",
+  "password" : "abraaacadabra"
+}
+
+
+
+### GET all users
+GET http://localhost:3000/api/users
+Content-Type: application/json
+
+### GET users of a specific lobby
+GET http://localhost:3000/api/users/6
+Content-Type: application/json
+
+### CREATE a new user
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "Aziza",
+  "email": "aziza@gmail.com",
+  "password" : "kjkbklb",
+  "role" : "user"
+  }
