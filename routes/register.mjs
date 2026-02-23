@@ -27,7 +27,7 @@ router.post("/", async (req, res) => {
             'INSERT INTO users (name, email, password) VALUES (?, ?, ?)', [name, email, encryptedPassword]
             )
         
-        return res.json({ message : "Utilisateur créé avec succès!" })
+        return res.redirect('/api/register/success')
     } catch (err) {
         console.log(err)
 
@@ -37,4 +37,7 @@ router.post("/", async (req, res) => {
     
     export default router 
 
-    // vérifier si 2x meme email
+    
+router.get('/success', (req, res) => {
+    res.render('register-success')
+})
