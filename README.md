@@ -26,7 +26,7 @@ Built as part of a BeCode challenge (Express Advanced).
 
 **Prerequisites:** Node.js and MariaDB installed on your machine.
 ```bash
-git clone https://github.com/alizee-dev/Lokkeroom---chat.git
+git clone https://github.com/alizee-dev/Lokkeroom-chat.git
 cd Lokkeroom-chat
 npm install
 ```
